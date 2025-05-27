@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f8ff;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Welcome back, lovely you!</h2>
+  <input type="text" placeholder="Email"><br>
+  <input type="password" placeholder="Password"><br>
+
+  <a class="button" onclick="playMusicAndGo()">Login</a>
+
+  <audio id="loginAudio" src="love.mp3"></audio>
+
+  <script>
+    function playMusicAndGo() {
+      const audio = document.getElementById("loginAudio");
+      audio.play();
+      setTimeout(() => {
+        window.location.href = "profile.html";
+      }, 6000); // 3 ثانیه بعد می‌ره به صفحه پروفایل
+    }
+  </script>
+
+</body>
+</html>
